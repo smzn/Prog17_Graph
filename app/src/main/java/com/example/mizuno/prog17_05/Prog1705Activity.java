@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class Prog1705Activity extends AppCompatActivity {
 
-    private Button barbutton, linebutton, piebutton;
+    private Button barbutton, linebutton, piebutton, sbutton, rbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,9 @@ public class Prog1705Activity extends AppCompatActivity {
         barbutton = (Button) findViewById(R.id.barbutton);
         linebutton = (Button) findViewById(R.id.linebutton);
         piebutton = (Button) findViewById(R.id.piebutton);
+        sbutton = (Button)findViewById(R.id.sbutton);
+        rbutton = (Button)findViewById(R.id.radarbutton);
+
         barbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,12 +35,26 @@ public class Prog1705Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    piebutton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(Prog1705Activity.this, PieActivity.class);
-            startActivity(intent);
-        }
-    });
+        piebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Prog1705Activity.this, PieActivity.class);
+                startActivity(intent);
+            }
+        });
+        sbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Prog1705Activity.this, ScatterActivity.class);
+                startActivity(intent);
+            }
+        });
+        rbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Prog1705Activity.this, RadarActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

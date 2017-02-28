@@ -26,6 +26,8 @@ public class AsyncHttpGetJson extends AsyncTask<Void, Void, String> {
     private BarActivity barActivity;
     private LineActivity lineActivity;
     private PieActivity pieActivity;
+    private ScatterActivity scattdrActivity;
+    private RadarActivity radarActivity;
     private int flg;
 
     public AsyncHttpGetJson(BarActivity activity, int flg) {
@@ -38,6 +40,14 @@ public class AsyncHttpGetJson extends AsyncTask<Void, Void, String> {
     }
     public AsyncHttpGetJson(PieActivity activity, int flg) {
         this.pieActivity = activity;
+        this.flg = flg;
+    }
+    public AsyncHttpGetJson(ScatterActivity activity, int flg) {
+        this.scattdrActivity = activity;
+        this.flg = flg;
+    }
+    public AsyncHttpGetJson(RadarActivity activity, int flg) {
+        this.radarActivity = activity;
         this.flg = flg;
     }
     //flg Bar -> 0, Line -> 1
@@ -122,6 +132,12 @@ public class AsyncHttpGetJson extends AsyncTask<Void, Void, String> {
             lineActivity.setLineChart(str);
         }else if(this.flg == 2){
             pieActivity.setPieChart(str);
+        }
+        else if(this.flg == 3){
+            scattdrActivity.setScatterChart(str);
+        }
+        else if(this.flg == 4){
+            radarActivity.setRadarChart(str);
         }
     }
 }

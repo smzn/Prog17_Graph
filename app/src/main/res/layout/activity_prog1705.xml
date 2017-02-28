@@ -33,4 +33,20 @@
         android:layout_below="@+id/linebutton"
         android:layout_centerHorizontal="true"
         android:id="@+id/piebutton" />
+
+    <Button
+        android:text="SCATTERCHART"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/piebutton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sbutton" />
+
+    <Button
+        android:text="RADARCHART"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbutton"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/radarbutton" />
 </RelativeLayout>
